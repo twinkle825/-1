@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no">
+    <title>用户注册</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2040159_umq9ajafnl.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="h-left">
+            <a href="javascript:;" class="h-back">
+                <i class="iconfont iconzuojiantou-2"></i>
+            </a>
+        </div>
+        <p class="h-tit">用户注册</p>
+        <p class="company">企业注册</p>
+    </div>
+    <section class="register_wrap">
+        <form action="" id="register_submit">
+            <div class="phone">
+                <p class="icon"><img src="./images/shouji.png" alt=""></p>
+                <div class="phone_code phone_code_new">
+                    <input type="text" placeholder="请输入手机号" id="mobile">
+                    <span class="del_btn"></span>
+                </div>
+            </div>
+            <div class="isRead">
+                <div class="readed">
+                    <div class="check_change">
+                        <span class="checkbox-treaty"></span>
+                        <span>
+                            <em>
+                                <span>我已阅读并同意以下协议，接受免除或限制责任，诉讼管辖约定等条款，愿意同步创建账户</span>
+                                <a href="">《国美平台服务协议》</a>
+                                <a href="">《国美平台隐私政策》</a>
+                                <a href="">《美付宝服务协议》</a>
+                            </em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="get_code">
+                <a href="">同意协议并注册</a>
+            </div>
+        </form>
+    </section>
+    <!--当用户输入错误时，进行的提示-->
+    <div class="cajas">11</div>
+    <script>
+        var delbtn = document.querySelector('.del_btn')
+        var mobile = document.getElementById('mobile')
+        var checkboxtreaty = document.querySelector('.checkbox-treaty')
+        var getcode = document.querySelector('.get_code')
+        var cajas = document.querySelector('.cajas')
+        var phone = /^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
+        var timer1
+        mobile.onclick = function () {
+            console.log(mobile.value);
+            if (mobile.value.trim()) {
+                delbtn.style.display = 'block'
+            }
+        }
+        checkboxtreaty.onclick = function () {
+            checkboxtreaty.classList.toggle("checkbox-treaty-active")
+        }
+        getcode.onclick = function () {
+            if (phone.test(mobile.value) == false) {
+                cajas.innerHTML = '手机号输入错误，请重新输入'
+                cajas.style.lineHeight = '1.173rem'
+                cajas.style.display = 'block'
+                timer1 = setTimeout(function () {
+                    cajas.innerHTML = ""
+                    cajas.style.display = 'none'
+                }, 1000)
+            } else if (mobile.value == '') {
+                cajas.innerHTML = '请输入手机号'
+                cajas.style.lineHeight = '1.173rem'
+                cajas.style.display = 'block'
+                timer1 = setTimeout(function () {
+                    cajas.innerHTML = ""
+                    cajas.style.display = 'none'
+                }, 1000)
+            } else if (checkboxtreaty.classList.contains('checkbox-treaty-active') == false) {
+                cajas.style.display = 'block'
+                cajas.innerHTML = ' 请勾选并同意《国美平台服务协议》《国美平台隐私政策》《美付宝服务协议》'
+                timer1 = setTimeout(function () {
+                    cajas.innerHTML = ""
+                    cajas.style.display = 'none'
+                }, 1000)
+            }
+        }
+    </script>
+</body>
+
+</html>

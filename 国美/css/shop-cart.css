@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+.header.fixed{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:11;
+}
+.header{
+    display: flex;
+    height: 1.173333rem;
+    background-color: #fff;
+    padding:0 0.32rem;
+    justify-content: space-between;
+}
+.header .h-left{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    line-height: 1;
+    margin-top:-0.3rem;
+    padding: 0 0.32rem;
+}
+.header .h-left .h-back{
+    display: block;
+    background-image: url(../images/下载\ \(6\).png);
+    margin:0.293rem 0;
+    width: 0.32rem;
+    height: 1.2rem;
+}
+.header .h-cnt{
+    margin-left:0.32rem;
+    margin-right:0.32rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+.flex-box{
+    display: flex;
+    height: 100%;
+    line-height: 1.173333rem;
+    margin-left:3rem;
+}
+.header .h-cnt .h-tit{
+    height: 100%;
+    line-height: 1.173333rem;
+    text-align: center;
+    font-size:0.48rem;
+    font-weight: 700;
+    color:#333;
+}
+.header .h-cnt .h-add{
+    display: flex;
+    align-items: center;
+}
+.header .h-cnt .h-add img{
+    width:0.373rem;
+    height:0.373rem;
+}
+.header .h-add span{
+    font-size:0.32rem;
+    display: inline-block;
+    width:0.98rem;
+    overflow: hidden;
+}
+
+.header .h-right .h-edit{
+    font-size:0.427rem;
+}
+.header .h-right p{
+    display: inline-block;
+    padding:0 0.16rem 0 0.32rem;
+    line-height: 1.173333rem;
+    height: 1.173333rem;
+}
+.header .h-right .h-btn{
+    width: 0.413333rem;
+    height: 0.173333rem;
+    padding-left:0.16rem;
+    background-image: url(../images/下载\ \(8\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.drop-tip-box{
+    margin-top:0.1333rem;
+}
+.drop-tip{
+    display: flex;
+    height: 0.666667rem;
+    line-height: 0.666667rem;
+    padding:0.133333rem 0.32rem;
+    background:#fff7d2 ;
+    color:#ff8000;
+    font-size:0.34rem;
+    margin:0 0.32rem;
+    border-radius: 0.466667rem;
+}
+.tips-box{
+    margin-top:1.3333rem;
+}
+.drop-tip .icon{
+    margin-right:0.2rem;
+    width: 0.533333rem;
+    height: 0.533333rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../images/下载\ \(9\).png);
+}
+.drop-tip .open{
+    margin-left:auto;
+}
+.drop-tip .open:after{
+    content:'';
+    width: 0.16rem;
+    height: 0.16rem;
+    padding-right:0.24rem;
+    background: url(../images/下载\ \(10\).png) 100% no-repeat;
+    background-size: 0.16rem 0.16rem;
+}
+
+
+.shop-container{
+    padding: 0 0.32rem;
+}
+.shop{
+    margin-bottom: 0.213333rem;
+}
+.shop .shop-header{
+    display: flex;
+    align-items: center;
+    height: 1.066667rem;
+    line-height: 1.066667rem;
+    padding:0 0.213333rem;
+    font-size: 0.373333rem;
+    color:#333;
+    align-items: center;
+}
+.shop .shop-header .option-box{
+    margin-right:0.06rem;
+    width: 0.426667rem;
+    height: 0.426667rem;
+    margin-top:-0.06rem;
+    background-image: url(../images/下载\ \(11\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon{
+    width: 0.986667rem;
+    height: 0.453333rem;
+}
+.shop .shop-header .name-box .icon img{
+    height: 100%;
+    width: auto;
+    margin:0 auto;
+}
+.shop .shop-header .name-box{
+    display: flex;
+    align-items: center;
+}
+.name{
+    font-size: 0.373333rem;
+    color:#333;
+}
+
+body{
+    background: #f3f5f7;
+}
+.card-bg{
+    margin-bottom:0.1333rem;
+    background-color: #fff;
+    border-radius: 0.266667rem;
+}
+.cart-product{
+    position: relative;
+    padding:0.266667rem 0.213333rem 0.266667rem 0.266667rem;
+}
+.cart-product .main-cont{
+    display: flex;
+}
+.main-cont .option-box{
+    position: absolute;
+    top:0.9333rem;
+    margin-right:0.27rem;
+    width: 0.426667rem;
+    height: 0.426667rem;
+    margin-top:-0.06rem;
+    background-image: url(../images/下载\ \(11\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.cart-product .main-cont .product-cont{
+    width: 8rem;
+    margin-left:0.8rem;
+    box-sizing: border-box;
+    font-size:0.373rem;
+    color:#333;
+    display: flex;
+}
+.cart-product .main-cont .product-cont .img-box{
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right:0.27rem;
+}
+.cart-product .main-cont .product-cont .img-box img{
+    width: 2.4rem;
+    height: auto;
+}
+.cart-product .main-cont .product-cont .info-box{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.cart-product .main-cont .product-cont .info-box .name{
+    width: 5.333rem;
+    height: 0.933333rem;
+    font-size:0.34rem;
+    color:#333;
+   font-weight: normal;
+}
+.cart-product .main-cont .product-cont .info-box .sku{
+    color:#5a6066;
+    font-size:0.32rem;
+    margin-top:0.213rem;
+}
+.product-cont .info-box .sku .sku-inner.more{
+    padding:0.066667rem 0.4rem 0.066667rem 0.106667rem;
+}
+.product-cont .info-box .sku .sku-inner{
+    position: relative;
+    display: inline-block;
+    background: #f3f5f7;
+    border-radius: 0.08rem;
+    line-height: 0.426667rem;
+}
+.product-cont .info-box .sku .sku-inner .icon{
+    position: absolute;
+    top:0.2rem;
+    right:0.106667rem;
+    height: 0.186667rem;
+    width: 0.186667rem;
+    background: url(../images/下载\ \(13\).png) 0 no-repeat;
+    background-size: 0.186667rem 0.186667rem;
+}
+.product-cont .info-box .sku .rush-span{
+    color:#f20c59;
+    font-size:0.32rem;
+    margin:0.16rem 0;
+   
+}
+.product-cont .info-box .sku .rush-span span{
+     border:1px solid #f20c59;
+     border-radius: 0.053333rem;
+     padding:0 0.08rem;
+}
+.product-cont .info-box .price-and-num{
+    margin-top:0.32rem;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-cont .info-box .price-and-num .price{
+    display: block;
+    box-sizing: border-box;
+    color:#f20c59;
+    font-size: 0.32rem;
+}
+.price-and-num .price strong{
+    font-size: 0.426667rem;
+}
+.counter-box{
+    border:0;
+    display: flex;
+    height: 0.586667rem;
+    width: 2.266667rem;
+    background-color: #fff;
+    border-radius: 0.066667rem;
+    line-height: 0.586667rem;
+    font-size: 0.346667rem;
+}
+.count-btn{
+    width: 0.533333rem;
+    height: 0.533333rem;
+    line-height: 0.533333rem;
+    text-align: center;
+    background-color: #f3f5f7;
+    border-radius: 0.053333rem;
+}
+.count-num{
+    border:0;
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    width: 0.853333rem;
+    text-align: center;
+}
+.bottom{
+    float: right;
+    margin-top:0.32rem;
+    color:#919599;
+}
+
+
+.pay-bar{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 100;
+    width:100%;
+    height: 1.333333rem;
+    display: flex;
+    padding-left:0.32rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: inset 0 1px 0 0 #dcddde;
+    font-size:0.4rem;
+}
+.pay-bar .option-box{
+    display: flex;
+    align-items: center;
+}
+.pay-bar .option-box .option{
+    width: 0.426667rem;
+    height: 0.426667rem;
+    margin-top:-0.06rem;
+    background-image: url(../images/下载\ \(11\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

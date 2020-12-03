@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/my-gome.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2040159_aytfvfl3yvv.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-right">
+            <i class="iconfont iconchangyongicon-"></i>
+        </div>
+        <div class="header-middle">
+            <h1>我的国美</h1>
+        </div>
+        <div class="header-left">
+            <i class="iconfont icondian nav_more"></i>
+        </div>
+        <ul class="nav_ulist" id="nav_ulist">
+            <li><a href="" class="iconn-44">首页</a></li>
+            <li><a href="" class="iconn-15">分类搜索</a></li>
+            <li><a href="" class="iconn-32">购物车</a></li>
+            <li><a href="./my-gome.html" class="iconn-90">我的国美</a></li>
+        </ul>
+    </div>
+
+    <div class="useshow">
+        <div class="userInfor">
+            <a href="" class="userHead">
+                <img src="./images/shopdefault.jpg" alt="">
+            </a>
+            <div>
+                <p>
+                    <a href="./login.html" id="login-reg">登录/注册</a>
+                </p>
+            </div>
+        </div>
+        <a href="" class="gif">
+            <span class="gift_img"></span>
+        </a>
+        <a href="" class="messageBtn"></a>
+    </div>
+
+    <ul class="sub_info grid5 sub_info5 memberWorth">
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/daifukuai.png" alt="">
+            </i>
+            <span class="label">待付款</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/daishouhuo.png" alt="">
+            </i>
+            <span class="label">待收货</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/daipingjia.png" alt="">
+            </i>
+            <span class="label">待评价</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/tuihou.png" alt="">
+            </i>
+            <span class="label">退款/售后</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/dingdan.png" alt="">
+            </i>
+            <span class="label">全部订单</span>
+            <span class="fp-ico">查看电子发票</span>
+        </li>
+    </ul>
+
+    <ul class="sub_info grid5 sub_info5 memberWorth">
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/gmb.png" alt="">
+            </i>
+            <span class="label">国美币余额</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/youhuiquan.png" alt="">
+            </i>
+            <span class="label">优惠券</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/meidou.png" alt="">
+            </i>
+            <span class="label">美豆</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/meitongka.png" alt="">
+            </i>
+            <span class="label">美通卡</span>
+        </li>
+        <li>
+            <i class="icon footprint_icon">
+                <img src="./images/qianbao.png" alt="">
+            </i>
+            <span class="label">我的钱包</span>
+        </li>
+    </ul>
+    <script>
+        var navmore = document.querySelector('.nav_more')
+        var navulist = document.getElementById('nav_ulist')
+        navmore.onclick = function () {
+            navulist.classList.toggle('nav-lists')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2040159_78hur859crm.css">
+    <script src="./js/index.js"></script>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+</head>
+
+<body>
+    <!--顶部-->
+    <nav class="toolbar">
+        <div class="title">
+            <p class="nav_ico iconfont iconzuojiantou-2"></p>
+            <div class="list_search">
+                <div class="search_module">
+                    <div class="search" contenteditable placeholder='牛奶'></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--综合，价格，销量，删选-->
+    <div class="Tabs_module">
+        <a href="javascript:;" class="general_list_second_show">
+            <span class="tab_ckd">综合</span>
+            <span class="general_red_up"></span>
+            <span class="general_red_down"></span>
+        </a>
+        <a href="javascript:;" class="pos_r">
+            <span>价格</span>
+            <span class="sort gray"></span>
+        </a>
+        <a href="javascript:;">
+            <span>销量</span>
+        </a>
+        <a href="javascript:;" class="fliter select">
+            <span>筛选</span>
+            <!-- <span class="icon-filter"></span> -->
+        </a>
+    </div>
+    <!--点击综合出现内容呢-->
+    <ul class="general_list">
+        <li class="list-one">综合</li>
+        <li class="list-two">评价从高到低</li>
+    </ul>
+     <!--点击综合出现内容的下方遮罩层-->
+    <div class="con_mask"></div>
+     <!--国美自营，品牌，包装方式，储藏方式-->
+     <ul class="tag_list flexbox">
+         <li class="ajax_req tag_item">
+             <span class="ellipsis">国美自营</span>
+         </li>
+         <li class="ajax_req tag_item">
+            <span class="ellipsis">品牌</span>
+            <i class="down"></i>
+        </li>
+        <li class="ajax_req tag_item">
+            <span class="ellipsis">包装方式</span>
+            <i class="down"></i>
+        </li>
+        <li class="ajax_req tag_item">
+            <span class="ellipsis">储藏方式</span>
+            <i class="down"></i>
+        </li>
+     </ul>
+    <!--点击筛选侧滑-->
+    <aside class="aslider filter_aslider entry">
+        <div class="bg close fade_in"></div>
+        <div class="wrapper right">
+            <div class="scroll">
+                <div class="slider slide-one">
+                    <div class="module_box">
+                        <div class="module padd_bot0">
+                            <ul class="filter_list">
+                                <li class="item checkbox checkbox1">
+                                    <span class="ellipsis">国美自营</span>
+                                </li>
+                                <li class="item checkbox checkbox2">
+                                    <span class="ellipsis">仅看有货</span>
+                                </li>
+                                <li class="item checkbox checkbox3">
+                                    <span class="ellipsis">会员商品</span>
+                                </li>
+                                <li class="item checkbox checkbox4">
+                                    <span class="ellipsis">团抢商品</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--地址模块-->
+                        <div class="module send_module">
+                            <span class="title">配送至</span>
+                            <p class="flex1 ellipsis addr area_address select_address">朝阳区朝外街道
+                                <i class="arrow iconfont iconchangyongicon-1"></i>
+                            </p>
+                            <!-- <i class="arrow iconfont iconchangyongicon-1"></i> -->
+                        </div>
+                        <!--价格模块-->
+                        <div class="module price_module flexbox v_center">
+                            <span class="title">价格区间</span>
+                            <div class="price_box flex1">
+                                <input type="text" class="price_in price1" placeholder="最低价">
+                                <span class="line"></span>
+                                <input type="text" class="price_in price2" placeholder="最高价">
+                            </div>
+                        </div>
+                        <!--类目模块-->
+                        <div class="module classify_module flexbox v_center">
+                            <span class="title">所有类目</span>
+                            <p class="flex1 ellipsis" id="fenlei">全部类目
+                                <i class="arrow iconfont iconchangyongicon-1"></i>
+                            </p>
+                        </div>
+                        <!--品牌模块-->
+                        <div class="module_box">
+                            <div class="module filter_module brand_module padd_bot0">
+                                <div class="flexbox v_center tit brand_tit">
+                                    <span class="title">品牌</span>
+                                    <i class="arrow arrow_down iconfont iconchangyongicon-1"></i>
+                                </div>
+                                <ul class="filter_list brand_list filter_list_model">
+                                    <li class="item checkbox">
+                                        <span>蒙牛</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>伊利</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>三元</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>安佳</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>宾格瑞</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>风车牧场</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>甘蒂牧场(MUH)</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>光明</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>好时</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>皇氏乳业</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>君乐宝</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>乐荷</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--包装方式-->
+                        <div class="module_box">
+                            <div class="module filter_module brand_module padd_bot0">
+                                <div class="flexbox v_center tit brand_tit">
+                                    <span class="title">包装方式</span>
+                                    <i class="arrow arrow_down iconfont iconchangyongicon-1"></i>
+                                </div>
+                                <ul class="filter_list brand_list filter_list_model">
+                                    <li class="item checkbox">
+                                        <span>袋装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>盒装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>罐装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>整箱</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>箱装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>礼盒装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>杯装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>瓶装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>散装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>桶装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>简装</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>组装</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--产地-->
+                        <div class="module_box">
+                            <div class="module filter_module brand_module padd_bot0">
+                                <div class="flexbox v_center tit brand_tit">
+                                    <span class="title">产地</span>
+                                    <i class="arrow arrow_down iconfont iconchangyongicon-1"></i>
+                                </div>
+                                <ul class="filter_list brand_list filter_list_model">
+                                    <li class="item checkbox">
+                                        <span>台湾</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>中国大陆</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>中国大陆</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>其他</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--储藏方式-->
+                        <div class="module_box">
+                            <div class="module filter_module brand_module padd_bot0">
+                                <div class="flexbox v_center tit brand_tit">
+                                    <span class="title">储藏方式</span>
+                                    <i class="arrow arrow_down iconfont iconchangyongicon-1"></i>
+                                </div>
+                                <ul class="filter_list brand_list filter_list_model">
+                                    <li class="item checkbox">
+                                        <span>冷冻保存</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>低温保存</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>密封置于阴凉、通风、干燥处</span>
+                                    </li>
+                                    <li class="item checkbox">
+                                        <span>常温保存</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed_btn_box flexbox">
+                <button class="filter_reset_btn flex1">重置</button>
+                <button class="filter_sure_btn flex1 close1">确定</button>
+            </div>
+        </div>
+    </aside>
+    <!--所有类目侧滑-->
+    <aside class="aslider filter_aslider category_aslider">
+        <div class="bg close fade_in"></div>
+        <div class="wrapper right slide_in">
+            <div class="title_box flexbox v_center">
+                <i class="close back_btn iconfont iconzuojiantou-2"></i>
+                <h3 class="flex1">所有类目</h3>
+            </div>
+            <div class="scroll scoll-all">
+                <div class="slider all_category">
+                    <div class="module_box">
+                        <div class="module padd_bot0">
+                            <ul class="filter_list">
+                                <li class="item radio checked">
+                                    <span>全部类目</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">乳饮冲调</span>
+                                <em>(4)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>牛奶</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>冲调食品</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>蜂蜜/柚子茶</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>咖啡</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">床上用品</span>
+                                <em>(2)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>床品件套</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>毛巾被/毯</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">奶粉</span>
+                                <em>(6)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>婴幼奶粉</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>3段奶粉</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>1段奶粉</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>2段奶粉</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>4段奶粉</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>特殊配方</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">进口食品</span>
+                                <em>(6)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>进口牛奶/乳制品</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>进口饼干糕点</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>进口糖果巧克力</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>进口冲调饮品</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>进口休闲零食</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>进口粮油米面</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">休闲食品</span>
+                                <em>(3)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>糖果巧克力</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>饼干糕点</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>其他零食</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">烹饪锅具</span>
+                                <em>(3)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>奶锅</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>汤锅</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>套锅</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module padd_bot0">
+                            <div class="flexbox v_center title_box2">
+                                <span class="title">水具茶具</span>
+                                <em>(3)</em>
+                            </div>
+                            <ul class="filter_list">
+                                <li class="item radio">
+                                    <span>玻璃杯</span>
+                                </li>
+                                <li class="item radio">
+                                    <span>保温杯</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--店铺推荐-->
+    <div class="shops">
+    </div>
+</body>
+<script src="./js/list-data.js"></script>
+<script>
+    //
+    var entry=document.querySelector('.entry')
+    entry.onmouseup=function(){
+
+    }
+    //最高价，最低价
+    var price1=document.querySelector('.price1')
+    var price2=document.querySelector('.price2')
+    window.onmouseup=function(e){
+        var e=e||window.event;
+        var pri1value=price1.value;
+        var pri2value=price2.value;
+    }
+    //品牌
+    var brandlist=document.querySelectorAll('.brand_list')
+    var arrowdown=document.querySelectorAll('.arrow_down')
+    arrowdown.forEach(function(item,index){
+        item.onclick=function(){
+            brandlist[index].classList.toggle('brand_lists')
+            item.classList.toggle('arrows')
+        }
+    })
+    //综合
+    var tabsmodule = document.querySelector('.Tabs_module')
+    var tabckd = document.querySelector('.tab_ckd')
+    var generallist = document.querySelector('.general_list')
+    var list1 = document.querySelector('.list-one')
+    var list2 = document.querySelector('.list-two')
+    var conmask = document.querySelector('.con_mask')
+    generallist.onclick = function () {
+        if (event.target.innerHTML == "评价从高到低") {
+            tabckd.innerHTML = "评价"
+            list2.classList.toggle('checkin')
+            if (list1.classList.contains('checkin')) {
+                list1.classList.remove('checkin')
+            }
+            generallist.style.display = 'none'
+            conmask.style.display = 'none'
+        } else {
+            tabckd.innerHTML = "综合"
+            list1.classList.toggle('checkin')
+            if (list2.classList.contains('checkin')) {
+                list2.classList.remove('checkin')
+            }
+            generallist.style.display = 'none'
+            conmask.style.display = 'none'
+        }
+    }
+    tabsmodule.onclick = function () {
+        if (event.target.innerHTML == '综合') {
+            console.log(event.target.innerHTML);
+            generallist.classList.toggle('general-list')
+            conmask.classList.toggle('conmasks')
+        }
+    }
+    //筛选
+    var filter = document.querySelector('.fliter span')
+    var aside = document.querySelector('aside')
+    var checkbox1 = document.querySelector('.checkbox1')
+    var checkbox2 = document.querySelector('.checkbox2')
+    var checkbox3 = document.querySelector('.checkbox3')
+    var checkbox4 = document.querySelector('.checkbox4')
+    var itemss=document.querySelectorAll('.module_box .item')
+    var fenlei=document.getElementById('fenlei')
+    var categoryaslider=document.querySelector('.category_aslider')
+    filter.onclick = function () {
+        aside.style.display = 'block'
+    }
+    checkbox2.onclick=function(){
+        checkbox2.classList.toggle('checked')
+    }
+    checkbox1.onclick=function(){
+        checkbox1.classList.toggle('checked')
+    }
+    checkbox3.onclick=function(){
+        checkbox3.classList.toggle('checked')
+    }
+    checkbox4.onclick=function(){
+        checkbox4.classList.toggle('checked')
+    }
+    itemss.forEach(function(item,index){
+        item.onclick=function(){
+            fenlei.innerHTML=item.innerHTML
+            categoryaslider.style.display='none'
+            fenlei.classList.add('con')
+        }
+    })
+    fenlei.onclick=function(){ 
+        categoryaslider.style.display='block'
+    }
+
+    //确定按钮
+    var close=document.querySelector('.close1')
+    var select=document.querySelector('.select')
+    close.onclick=function(){
+        console.log(111);
+        entry.style.display = 'none'
+    }
+  
+    
+
+
+    var shops = document.querySelector('.shops')
+    var html = '';
+    html += `
+                <div class="shopping">
+                    <div class="shopname">
+                        <div>
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店</span>
+                            <span></span>
+                        </div>
+                        <a href="javascript:;">进店逛逛</a>
+                    </div>
+                </div> 
+                <div class="shop-img">
+                    <a href="">
+                        <img src="./images/T1FmL5BXZv1RCvBVdK_160_260.webp" alt="">
+                        <span>¥79.90</span>
+                    </a>
+                    <a href="">
+                        <img src="./images/T1b2Z5BgEv1RCvBVdK_160_260.jpg" alt="">
+                        <span>¥79.90</span>
+                    </a>
+                    <a href="">
+                        <img src="./images/T1y7J5B_hT1RCvBVdK_160_260.jpg" alt="">
+                        <span>¥79.90</span>
+                    </a>
+                </div>
+           `
+    for (var i = 0; i < list.length; i++) {
+        html += `
+                <ul class="shop-list">
+                    <li class="gd-list">
+                        <span class="gd_img">
+                            <img src="${list[i].图片}" alt="">
+                        </span>
+                        <div class="info_box flex1">
+                            <h3 class="title">
+                                <em class="big-block-tag">${list[i].标签}</em>
+                                ${list[i].标题}
+                            </h3>
+                            <div class="flex-box item-sku">
+                                <p class="flex-bd">
+                                    ${list[i].flexbd}
+                                </p>
+                                <p class="flex-bd">
+                                    ${list[i].flexbd2}
+                                </p>
+                                <p class="flex-bd">
+                                    ${list[i].flexbd4}
+                                </p>
+                            </div>
+                            <p class="price_warp"> ${list[i].价格}</p>
+                            <div class="vip99">
+                                <span>九九会员</span>
+                                <i>98折</i>
+                            </div>
+                            <a href="javascript:;" class="z-s-dis"> ${list[i].zsdis}</a>
+                            <p class="z-s-sale">国美体验店（北京国美富贵园店）</p>
+                            <a href="">
+                                <span class="z-s-sale">
+                                    <em>${list[i].信息}</em>
+                                    <em>查看</em>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+               `
+    }
+    shops.innerHTML = html
+
+</script>
+
+</html>
