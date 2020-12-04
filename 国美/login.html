@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no">
+    <title>国美用户登录</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="login-close-box">
+        <span class="login-close"></span>
+    </div>
+    <section class="login-wrap">
+        <form action="" method="POST" class="form_con">
+            <!--头部logo-->
+            <a href="javascript" class="mxlogo">
+                <img src="./images/T1XqAyBXb_1RCvBVdK_660_360.png" alt="">
+            </a>
+            <div class="loginStyle-c">
+                <div class="accout-login">
+                    <div class="user">
+                        <div class="user-code">
+                            <input type="text" placeholder="请输入手机号">
+                            <span class="del-btn del1"></span>
+                        </div>
+                        <span class="input_line input-line1"></span>
+                    </div>
+
+                    <div class="code codeLine">
+                        <div class="code-con mssage-con input_box">
+                            <div class="code-con-code">
+                                <input type="text" placeholder="请输入验证码">
+                                <span class="del-btn del2"></span>
+                            </div>
+                            <div class="get-code get-code-gray">获取验证码</div>
+                            <span class="input_line input-line2"></span>
+                        </div>
+                    </div>
+
+                    <div class="state">
+                        <span class="checkbox-treaty"></span>
+                        <span>未注册手机验证后自动注册,我已阅读并同意</span>
+                        <a href="">《国美平台服务协议》</a>
+                        <a href="">《国美平台隐私政策》</a>
+                        <a href="">《美付宝服务协议》</a>
+                    </div>
+
+                    <div class="login-btn">
+                        <a href="javascript:;">登录</a>
+                    </div>
+
+                    <div class="qk-login">
+                        <span class="quick-lg to-pwd-login">账号密码登录</span>
+                        <div class="find-btn">
+                            <a href="./register.html">新用户注册</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="accout-login1">
+                    <div class="user1">
+                        <div class="user-code1">
+                            <input type="text" placeholder="手机号/邮箱/用户名/门店会员卡号">
+                            <span class="del-btn1 del1"></span>
+                        </div>
+                        <span class="input_line2 input-line1"></span>
+                    </div>
+
+                    <div class="code1 codeLine">
+                        <div class="code-con1 mssage-con input_box">
+                            <div class="code-con-code">
+                                <input type="password" placeholder="请输入密码">
+                                <span class="del-btn del2"></span>
+                            </div>
+                            <div class="get-code get-code-gray">忘记密码？</div>
+                            <span class="input_line input-line2"></span>
+                        </div>
+                    </div>
+
+                    <div class="state1">
+                        <span class="checkbox-treaty1"></span>
+                        <span>我已阅读并同意</span>
+                        <a href="">《国美平台服务协议》</a>
+                        <a href="">《国美平台隐私政策》</a>
+                    </div>
+
+                    <div class="login-btn1">
+                        <a href="javascript:;">登录</a>
+                    </div>
+
+                    <div class="qk-login">
+                        <span class="quick-lg quick-lg1">短信验证码登录</span>
+                        <div class="find-btn">
+                            <a href="./register.html">新用户注册</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--当用户输入错误时，进行的提示-->
+            <div class="cajas"></div>
+        </form>
+    </section>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.js"></script>
+    <script>
+        var user = document.querySelector('.user-code input')
+        var user1 = document.querySelector('.user-code1 input')
+        var code = document.querySelector('.code-con-code input')
+        var code1 = document.querySelector('.code1 input')
+        var delbtn1 = document.querySelector('.del1')
+        var delbtn2 = document.querySelector('.del2')
+        var inputline1 = document.querySelector('.input-line1')
+        var inputline2 = document.querySelector('.input-line2')
+        var loginbtn = document.querySelector('.login-btn')
+        var loginbtn1 = document.querySelector('.login-btn1')
+        var cajas = document.querySelector('.cajas')
+        var checkboxtreaty = document.querySelector('.checkbox-treaty')
+        var checkboxtreaty1 = document.querySelector('.checkbox-treaty1')
+        var topwdlogin = document.querySelector('.to-pwd-login')
+        var accoutlogin = document.querySelector('.accout-login')
+        var accoutlogin1 = document.querySelector('.accout-login1')
+        var quicklg1 = document.querySelector('.quick-lg1')
+        //点击手机号码,正则验证手机号
+        var phone = /^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
+        //用户名,以字母开头，允许字母数字下划线，长度在5-12位
+        var username = /^[a-zA-Z][a-zA-Z0-9_]{5,12}$/
+        //密码,以字母数字开头，长度在5-8位，只能包含字母数字下划线
+        var pwd = /^[a-zA-Z0-9][a-zA-Z0-9_]{5,8}/
+        user.onclick = function () {
+            delbtn1.style.display = 'block'
+            inputline1.classList.add('line_animation')
+        }
+        user.onblur = function () {
+            delbtn1.style.display = 'none'
+            inputline1.classList.remove('line_animation')
+        }
+        // //点击验证码
+        code.onclick = function () {
+            delbtn2.style.display = 'block'
+            inputline2.classList.add('line_animation')
+        }
+        code.onblur = function () {
+            delbtn2.style.display = 'none'
+            inputline2.classList.remove('line_animation')
+        }
+        //点击input
+        checkboxtreaty.onclick = function () {
+            checkboxtreaty.classList.toggle("checkbox-treaty-active")
+        }
+        checkboxtreaty1.onclick = function () {
+            checkboxtreaty1.classList.toggle("checkbox-treaty-active")
+        }
+        function time1() {
+            cajas.style.display = 'none'
+            cajas.innerHTML = ''
+        }
+        var timer1 = setTimeout(time1, 1000)
+        //点击登录按钮
+        loginbtn.onclick = function () {
+            if (user.value == '' && code.value == '') {
+                clearTimeout(timer1)
+                cajas.style.display = 'block'
+                cajas.innerHTML = '请输入手机号或者验证码'
+                cajas.style.lineHeight = '1.173rem'
+                var timer1 = setTimeout(time1, 1000)
+            } else if (checkboxtreaty.classList.contains('checkbox-treaty-active') == false) {
+                clearTimeout(timer1)
+                cajas.style.display = 'block'
+                cajas.innerHTML = ' 请勾选并同意《国美平台服务协议》《国美平台隐私政策》《美付宝服务协议》'
+                var timer1 = setTimeout(time1, 1000)
+            } else if (user.value != '' && code.value != '') {
+                if (phone.test(user.value) == false) {
+                    clearTimeout(timer1)
+                    cajas.style.display = 'block'
+                    cajas.innerHTML = '请重新输入手机号'
+                    cajas.style.lineHeight = '1.173rem'
+                    var timer1 = setTimeout(time1, 1000)
+                }
+            }
+        }
+
+        //
+        loginbtn1.onclick = function () {
+            if (user1.value == '' && code1.value == '') {
+                clearTimeout(timer1)
+                cajas.style.display = 'block'
+                cajas.innerHTML = '请输入手机号或者验证码'
+                cajas.style.lineHeight = '1.173rem'
+                var timer1 = setTimeout(time1, 1000)
+            } else if (checkboxtreaty1.classList.contains('checkbox-treaty-active') == false) {
+                clearTimeout(timer1)
+                cajas.style.display = 'block'
+                cajas.innerHTML = ' 请勾选并同意《国美平台服务协议》《国美平台隐私政策》'
+                var timer1 = setTimeout(time1, 1000)
+            } else if (user1.value != '' && code1.value != '') {
+                if (username.test(user1.value) == false) {
+                    clearTimeout(timer1)
+                    cajas.style.display = 'block'
+                    cajas.innerHTML = '请重新输入用户名'
+                    cajas.style.lineHeight = '1.173rem'
+                    var timer1 = setTimeout(time1, 1000)
+                } else if (pwd.test(code1.value) == false) {
+                    clearTimeout(timer1)
+                    cajas.style.display = 'block'
+                    cajas.innerHTML = '密码错误，请重新输入密码'
+                    cajas.style.lineHeight = '1.173rem'
+                    var timer1 = setTimeout(time1, 1000)
+                }
+            }
+            // //设置七天无理由登录
+            // // var d = new Date()  // 获取当前时间
+            // // d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000);
+            // var user11 = document.querySelector('.user-code1 input').value
+            // var code11 = document.querySelector('.code1 input').value
+            // if (user11 == 'twink123' && code11 == 'ghy123456') {
+            //     window.location.href = "https://www.baidu.com"
+            // }
+
+        }
+
+        // var d = new Date()  // 获取当前时间
+        // d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000);
+        // var username1 = user1.value;
+        // var password1 = code1.value;
+        // document.cookie = "username1=twink123;expirse=" + d
+        // document.cookie = "password1=ghy123456;expirse=" + d
+        // var user11 = document.querySelector('.user-code1 input').value
+        // var code11 = document.querySelector('.code1 input').value
+        // document.cookie = `admin=twink123`
+        // document.cookie = `password=ghy123456`
+        // window.onload = function () {
+        //     console.log(document.cookie);
+        //     document.querySelector('.user-code1 input').value = document.cookie.split(";")[0].split("=")[1]
+        //     document.querySelector('.code1 input').value = document.cookie.split(";")[1].split("=")[1]
+        // }
+
+        //选择账号密码登录还是短信验证登录
+        topwdlogin.onclick = function () {
+            accoutlogin.style.display = 'none'
+            accoutlogin1.style.display = 'block'
+        }
+        quicklg1.onclick = function () {
+            accoutlogin.style.display = 'block'
+            accoutlogin1.style.display = 'none'
+        }
+
+      
+    </script>
+</body>
+
+</html>

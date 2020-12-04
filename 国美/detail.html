@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2040159_co8uhbruhjv.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.min.css">
+        <link rel="stylesheet" href="./css/swiper.min1.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+</head>
+
+<body>
+    <!--头部-->
+    <nav class="nav">
+        <div class="toolbar" id="header_toolbar">
+            <span class="iconfont iconchangyongicon- nav_back"></span>
+            <span class="iconfont icondian nav_more"></span>
+            <ul class="nav_list">
+                <li class="active">
+                    <span>商品</span>
+                </li>
+                <li>
+                    <span>详情</span>
+                </li>
+                <li>
+                    <span>评价</span>
+                </li>
+            </ul>
+            <div class="flexbox" id="header_collect_cart">
+                <div class="item collection_box">
+                    <span class="iconfont iconxin"></span>
+                </div>
+                <!--购物车-->
+                <div class="item shop_cart">
+                    <a href=""><span class="iconfont icongou_wu_che1"></span></a>
+                </div>
+            </div>
+        </div>
+        <ul class="nav_ulist" id="nav_ulist">
+            <li><a href="" class="iconn-44">首页</a></li>
+            <li><a href="" class="iconn-15">分类搜索</a></li>
+            <li><a href="" class="iconn-32">购物车</a></li>
+            <li><a href="./my-gome.html" class="iconn-90">我的国美</a></li>
+        </ul>
+    </nav>
+    <!--顶部轮播-->
+    <div class="swipper">
+        <div class="swiper-container swiper-con1">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide"><img src="./images/T1Yyx7ByKT1RCvBVdK_400.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/T16WxKBTd_1RCvBVdK_400 (1).jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/T1jxdKB4h_1RCvBVdK_400.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/T1rqWKBbb_1RCvBVdK_400.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/T19yE7BmYT1RCvBVdK_400.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination slider_pic_num1"></div>
+        </div>
+    </div>
+    <!--标题-->
+    <div class="moudle info_moudle">
+        <div class="title">
+            <div class="title_content ellipsis_two to_detail">
+                <p class="big-goods-tag">国美超市</p>
+                <h1 class="title_text">伊利单提装金典纯牛奶250ml*12 自然恩赐 尽在金典</h1>
+            </div>
+            <div class="share-profit">
+                <em class="ic-share"></em>
+                <span class="txt-share">分享</span>
+            </div>
+        </div>
+    </div>
+    <!--数量-->
+    <div class="moudle number_moudle">
+        <div class="number_cont flexbox v_center">
+            <label for="" class="label">数量</label>
+            <div class="box">
+                <i class="minus_btn btn">-</i>
+                <input type="text" class="count" value="1">
+                <i class="add_btn btn">+</i>
+            </div>
+        </div>
+    </div>
+     <!--地址模块-->
+     <div class="moudle address_moudle address_moudleModify">
+        <div class="address_cont address_cont_style flexbox">
+            <label for="" class="label">送至</label>
+            <div class="flex1 ellipsis">
+                <p class="ellipsis address address_select_end address_new">
+                    <span class="address_sub">天津市和平区南市街道</span>
+                    <span class="yunfei">,</span>
+                    <span class="dec">免运费</span>
+                </p>
+            </div>
+            <p class="arrow_icon2 iconfont iconchangyongicon-1"></p>
+        </div>
+        <div class="server">
+            <ul class="sendExplain">
+                <li class="classa"><span>正品保障</span></li>
+                <li class="classa"><span>包邮</span></li>
+                <li class="not_support"><span>不支持7天无理由退货</span></li>
+            </ul>
+        </div>
+    </div>
+     <!--评价模块-->
+     <div class="moudle evaluate_moudle">
+        <div class="evaluate_top flexbox v_center">
+            <p class="flex1 submit_element">
+                <span>评价(</span>
+                <span>109</span>
+                <span>)</span>
+            </p>
+            <span class="good_comment flex1">
+                好评度:
+                <em>
+                    <span> 100</span>
+                    %
+                </em>
+            </span>
+        </div>
+        <div class="evaluate_list goods_evaluate">
+            <div class="evaluate_list_item">
+                <div class="message_top flexbox v_center ">
+                    <div class="user_portrait"><img src="./images/T1YvKTBsDv1RCvBVdK.png" alt=""></div>
+                    <p class="user_name">小***D</p>
+                    <div class="level_icon"><img src="./images/T122dgBCLT1RCvBVdK.png" alt=""></div>
+                    <div class="score_star">
+                        <p class="score_sige"></p>
+                    </div>
+                </div>
+            </div>
+            <p class="message_text ellipsis_two">牛奶收到了，日期新鲜，价格实惠，太好了！</p>
+        </div>
+        <div class="evaluate_nav">
+            <ul class="flexbox center">
+                <li class="flex1 all_evaluation">
+                    <span class="icon evaluate_icon"></span>
+                    <span>全部评价(</span>
+                    <span>109</span>
+                    <span>)</span>
+                </li>
+                <li class="flex1">
+                    <span class="icon info_icon"></span>
+                    <span>购买咨询((</span>
+                    <span>109</span>
+                    <span>)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!--店铺模块-->
+     <div class="shops">
+        <div class="z-g-shop-img">
+            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+        </div>
+        <div class="z-g-shop-info">
+            <div>国美体验店（北京国美富贵园店）</div>
+            <div class="z-g-shop-gps">东城区 </div>
+        </div>
+        <div class="z-g-checkin">进店逛逛</div>
+    </div>
+     <!--猜你喜欢-->
+     <div class="moudle guess_like">
+        <p class="guess_title">猜你喜欢</p>
+        <div class="g-item">
+            <ul class="gird3">
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="z-g-like-imgbox"><img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt=""></div>
+                        <div class="z-g-shop">
+                            <img src="./images/T1kXb4BCZg1RCvBVdK.png" alt="">
+                            <span>国美体验店（北京国美富贵园店）</span>
+                        </div>
+                        <p class="g_name ellipsis_two">伊利金典纯牛奶2箱组合装250ml*12盒 自然恩赐尽在金典</p>
+                        <p class="g_price">99.00</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--商品介绍-->
+    <div class="description_item">
+        <div class="des_nav">
+            <ul>
+                <li>
+                    <span  class="active2"> 商品介绍</span>
+                </li>
+                <li><span>规格参数</span></li>
+                <li><span>包装售后</span></li>
+            </ul>
+        </div>
+        <div class="des_tab_wrap">
+            <ul>
+                <li class="item active1">
+                    <img src="./images/T11bWKB5hT1RCvBVdK (2)" alt="">
+                   <img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt="">
+                   <img src="./images/T1_ah7BXxT1RCvBVdK_320 (1).webp" alt="">
+                </li>
+                <li class="item">
+                    <table class="parameter">
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="bg title">主体</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">品牌</td>
+                                <td class="bgv">见包装</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">产地</td>
+                                <td class="bgv">见包装</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">保质期单位</td>
+                                <td class="bgv">月</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">保质期</td>
+                                <td class="bgv">6</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">储藏方式</td>
+                                <td class="bgv">常温保存</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">包装方式</td>
+                                <td class="bgv">礼盒装</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">口味</td>
+                                <td class="bgv">原味</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li class="item">
+                    <h3 class="pack-service">包装清单</h3>
+                    <div class="pack">
+                        <p class="list_desc">无</p>
+                    </div>
+                    <h3 class="pack-service">售后服务</h3>
+                    <div class="service">
+                        <p class="list_desc">无</p>
+                        <div class="service_price_desc">
+                            <div class="title_box">
+                                <p class="title">价格说明</p>
+                                <ul class="con">
+                                    <li>
+                                        <span>1.</span>
+                                        未划线价格： 商品展示的中间未划横线的价格，该价格是商品的销售标价，
+                                        最终成交价格可能会因使用优惠券等原因而发生变化，请以订单结算页面价格
+                                        为准。
+                                    </li>
+                                    <li>
+                                        <span>2.</span>
+                                        划线价格： 商品展示的中间划横线的价格，该价格是商品的参考价，可能是商品的厂商指导价、正品零售价、商品吊牌价、品牌专柜价，或者是在国美平台上曾经展示过的销售价等价格；由于地区、时间的差异性、市场行情波动、产品批次等因素，品牌专柜标价、
+                                        商品吊牌价等可能会与您购物时展示的不一致，仅供您选购商品时参考。
+                                    </li>
+                                    <li>
+                                        <span>3.</span>
+                                        其他： 商品促销信息以商品详情页促销栏目中的信息为准；如您发现活动商
+                                        品售价或促销信息有异常，请购买前先联系销售商咨询。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!--底部-->
+     <div class="footer_nav flexbox">
+        <div class="icon_entrance ">
+            <ul class="flexbox">
+                <li class="flex1 store_box">
+                    <a href="">
+                        <span class="iconfont iconmendian"></span>
+                        <em class="name">门店</em>
+                    </a>
+                </li>
+                <li class="flex1 store_box">
+                    <a href="">
+                        <span class="iconfont iconkefu"></span>
+                        <em class="name offline">门店</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="yellow">
+                        加入购物车
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="redbtn">
+                        立即购买
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script>
+        //头部
+        var navmore = document.querySelector('.nav_more')
+        var navulist = document.getElementById('nav_ulist')
+        navmore.onclick = function () {
+            navulist.classList.toggle('nav-lists')
+        }
+        //顶部轮播
+        var swiper = new Swiper('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            pagination: '.swiper-pagination',
+            paginationType: 'fraction'
+        });
+
+        //数量
+        var minusbtn = document.querySelector('.minus_btn')
+        var addbtn = document.querySelector('.add_btn')
+        var count = document.querySelector('.count')
+        //利用input的value值来进行数量的加减
+        addbtn.onclick = function () {
+            var num = count.value;
+            num++;
+            count.value = num
+            minusbtn.classList.remove('disabled')
+        }
+        minusbtn.onclick = function () {
+            var num = count.value;
+            num--;
+            if (num <= 1) {
+                num = 1
+                minusbtn.classList.add('disabled')
+            }
+            count.value = num
+        }
+         //猜你喜欢
+         var swiper1 = new Swiper('.swiper-container1', {
+            pagination: '.swiper-pagination1',
+            slidesPerView: 3,
+            slidesPerColumn: 2,
+            paginationClickable: true,
+            spaceBetween: 30
+        });
+
+        //商品介绍，规格参数，包装售后
+        var desnav=document.querySelectorAll('.des_nav li span')
+        var items=document.querySelectorAll('.des_tab_wrap .item')
+        desnav.forEach(function(item,index){
+            item.onclick=function(){
+                for(var i=0;i<desnav.length;i++){
+                    desnav[i].classList.remove('active2')
+                    items[i].classList.remove('active1')
+                }
+                this.classList.add('active2')
+                items[index].classList.add('active1')
+            }
+        })
+    </script>
+</body>
+
+</html>
